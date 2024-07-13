@@ -1,4 +1,4 @@
-# 
+# Seamless Migration of Peer-To-Peer QUIC Connections in Mobile Environments
 An overview of the Master Thesis containing links to all implementations utilized to implement the prototype. 
 
 **Note: Some repositories are currently in active development and might be released in future papers, therefore they are not publicly available.**
