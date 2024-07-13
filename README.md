@@ -10,8 +10,35 @@ The prototype implementation is based on 3 separate modules:
 - webrtc-rs/ice [[https://github.com/JustusvonderBeek/webrtc](https://github.com/JustusvonderBeek/webrtc)]
 - quicheperf [[https://gitlab.lrz.de/von_der_beek/quicheperf-stun](https://gitlab.lrz.de/von_der_beek/quicheperf-stun)]
 
-## Build and Run
+## Build
 Because the **quicheperf** repository is currently not publicly available, the prototype cannot be build at the moment.
+
+## Run
+An example run of quicheperf can look something like the following:
+
+```bash
+quicheperf client -l 127.0.0.1:10000 -c 127.0.0.1:20000 -d 100 -b 1MB --stun-urls stun.l.google.com:19302
+| sec | time  | FC_av ‖ P0 Mbps       | P0 Lost/Sched/Total (sp) |
+|   0 | 48:00 |  999K ‖    0.01,  12K |     0 /    4/     4 ( 0) |
+| sec | time  | Total Mbps | FC_av ‖ P0 Mbps, cwnd | P0 Lost/Sched/Total (sp) ‖ P1 Mbps, cwnd | P1 Lost/Sched/Total (sp) |
+|   1 | 48:01 |       1.05 |  877K ‖    0.67,  13K |     0 /  228/    92 ( 0) ‖    0.38,  10K |     0 /  127/    61 ( 0) |
+|   2 | 48:02 |       1.05 |  752K ‖    0.01,  13K |     0 /    2/     2 ( 0) ‖    1.04,  10K |     0 /  342/   150 ( 0) |
+|   3 | 48:03 |       1.06 |  627K ‖    0.00,  13K |     0 /    2/     2 ( 0) ‖    1.06,  10K |     0 /  352/   162 ( 0) |
+|   4 | 48:04 |       1.06 |  502K ‖    0.00,  13K |     0 /    2/     2 ( 0) ‖    1.06,  10K |     0 /  341/   142 ( 0) |
+| sec | time  | Total Mbps | FC_av ‖ P0 Mbps, cwnd | P0 Lost/Sched/Total (sp) ‖ P1 Mbps, cwnd | P1 Lost/Sched/Total (sp) ‖ P2 Mbps, cwnd | P2 Lost/Sched/Total (sp) |
+|   5 | 48:05 |       1.07 |  377K ‖    0.00,  13K |     0 /    2/     2 ( 0) ‖    1.06,  10K |     0 /  361/   166 ( 0) ‖    0.01,  12K |     0 /    2/     2 ( 0) |
+|   6 | 48:06 |       1.06 |  252K ‖    0.00,  13K |     0 /    2/     2 ( 0) ‖    1.05,  10K |     0 /  333/   137 ( 0) ‖    0.01,  12K |     0 /    2/     2 ( 0) |
+|   7 | 48:07 |       1.06 |  128K ‖    0.00,  13K |     0 /    2/     2 ( 0) ‖    1.06,   5K |     0 /  367/   182 ( 0) ‖    0.00,  13K |     0 /    2/     2 ( 0) |
+|   8 | 48:08 |       1.19 |   19K ‖    1.09,  22K |     0 /  337/   149 ( 0) ‖    0.06,   0  |     0 /   20/    16 ( 0) ‖    0.03,  13K |     0 /    9/     6 ( 0) |
+...
+|  22 | 48:22 |       1.06 |   25K ‖    0.00,   0  |     0 /    0/     0 ( 0) ‖    1.06,  45K |     0 /    0/   155 ( 0) |
+|  23 | 48:23 |       1.06 |   34K ‖    0.00,   0  |     0 /    0/     0 ( 0) ‖    1.06,  46K |     0 /    0/   155 ( 0) |
+|  24 | 48:24 |       1.06 |   44K ‖    0.00,   0  |     0 /    0/     0 ( 0) ‖    1.06,  47K |     0 /    0/   167 ( 0) |
+|  25 | 48:25 |       1.07 |   53K ‖    0.00,   0  |     0 /    3/     3 ( 0) ‖    1.07,  47K |     0 /    0/   181 ( 0) |
+|  26 | 48:26 |   28K ‖    1.07,  46K |     0 /    0/   163 ( 0) |
+|  27 | 48:27 |   36K ‖    1.06,  46K |     0 /    0/   159 ( 0) |
+|  28 | 48:28 |   46K ‖    1.06,  48K |     0 /    0/   170 ( 0) |
+```
 
 ## Abstract
 At the inception of the internet, its creators could not have envisioned its current scale,
