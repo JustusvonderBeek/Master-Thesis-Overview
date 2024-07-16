@@ -9,6 +9,7 @@ The prototype implementation is based on 3 separate modules:
 - quiche [[https://gitlab.lrz.de/von_der_beek/quiche-p2p.git](https://gitlab.lrz.de/von_der_beek/quiche-p2p.git)]
 - webrtc-rs/ice [[https://github.com/JustusvonderBeek/webrtc](https://github.com/JustusvonderBeek/webrtc)]
 - quicheperf [[https://gitlab.lrz.de/von_der_beek/quicheperf-stun](https://gitlab.lrz.de/von_der_beek/quicheperf-stun)]
+- measurement-scripts [[https://github.com/JustusvonderBeek/master-thesis-scripts-and-measures/tree/main](https://github.com/JustusvonderBeek/master-thesis-scripts-and-measures/tree/main)]
 
 ## Build
 Because the **quicheperf** repository is currently not publicly available, the prototype cannot be build at the moment.
@@ -43,7 +44,7 @@ quicheperf client -l 127.0.0.1:10000 -c 127.0.0.1:20000 -d 100 -b 1MB --stun-url
 ## Abstract
 At the inception of the internet, its creators could not have envisioned its current scale,
 importance, and requirements. Initially designed as ARPANET, a small packet switching
-network designed to connect four US Universities for academic purposes, it constantly
+network designed to connect four US universities for academic purposes, it constantly
 evolved over its 55-year history into a global real-time communication network firmly
 integrated into everyday life. With the rise of smartphones, a shift towards more mobile
 internet traffic is observed, requiring fast access technologies and error-tolerant transport
