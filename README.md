@@ -9,6 +9,9 @@ The prototype implementation is based on 3 separate modules:
 - quiche [[https://gitlab.lrz.de/von_der_beek/quiche-p2p.git](https://gitlab.lrz.de/von_der_beek/quiche-p2p.git)]
 - webrtc-rs/ice [[https://github.com/JustusvonderBeek/webrtc](https://github.com/JustusvonderBeek/webrtc)]
 - quicheperf [[https://gitlab.lrz.de/von_der_beek/quicheperf-stun](https://gitlab.lrz.de/von_der_beek/quicheperf-stun)]
+
+Plus an additional repository containing the Mininet setup and other testing scripts.
+
 - measurement-scripts [[https://github.com/JustusvonderBeek/master-thesis-scripts-and-measures/tree/main](https://github.com/JustusvonderBeek/master-thesis-scripts-and-measures/tree/main)]
 
 ## Build
